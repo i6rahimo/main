@@ -78,18 +78,19 @@ validation2
       errorMessage: 'Имя обязательно'
     }
   ])
-  .addField('.project-email', [
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Email обязателен',
-    },
-    {
-      rule: 'email',
-      value: true,
-      errorMessage: 'Введите корректный Email',
-    },
-  ]).onSuccess((event) => {
+  // .addField('.project-email', [
+  //   {
+  //     rule: 'required',
+  //     value: true,
+  //     errorMessage: 'Email обязателен',
+  //   },
+  //   {
+  //     rule: 'email',
+  //     value: true,
+  //     errorMessage: 'Введите корректный Email',
+  //   },
+  // ])
+  .onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
 
     let formData = new FormData(event.target);
@@ -106,9 +107,18 @@ validation2
       }
     }
 
-    xhr.open('POST', 'mail.php', true);
-    xhr.send(formData);
-    document.location.href = 'spasibo';
+    const email = document.querySelector('#email');
+    const whatsapp = document.querySelector('#whatsapp');
+    const telegram = document.querySelector('#telegram');
+
+    if(email.value === '' && whatsapp.value === '' && telegram.value === '') {
+      xhr.abort();
+      alert('Вы забыли указать Email, WhatsApp или Telegram')
+    } else {
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+      document.location.href = 'spasibo';
+    }
   });
 
 validation3

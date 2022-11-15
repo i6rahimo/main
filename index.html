@@ -586,10 +586,10 @@
             <div class="form__link-wrapper">
               <p>Выберите один или несколько способов связи</p>
             <label class="form__label">
-              <input type="email" class="form-input calculation-email" id="calculation-email" data-validate-field="email" name="E-mail"  placeholder='e-mail *'>
+              <input type="email" class="form-input calculation-email" id="calculation-email" data-validate-field="email" name="E-mail"  placeholder='e-mail'>
             </label>
             <label class="form__label">
-              <input type="tel" class="form-input calculation-tel" id="calculation-tel" data-validate-field="tel" name="Телефон" placeholder="Телефон *">
+              <input type="tel" class="form-input calculation-tel" id="calculation-tel" data-validate-field="tel" name="Телефон" placeholder="Телефон">
             </label>
           </div>
             <div class="file__item">
@@ -1288,16 +1288,16 @@
     <form id="project_form" class="modal__form" method="POST">
       <input type='hidden' name='Тема' value='' class="modal__subject">
       <label class="form__label center">
-        <input type="text" class="form-input project-name" name="Имя" placeholder='Имя'>
+        <input type="text" class="form-input project-name" id="name" name="Имя" placeholder='Имя'>
       </label>
       <label class="form__label center">
-        <input type="email" class="form-input project-email" data-validate-field="email" name="E-mail" required placeholder='E-mail'>
+        <input type="email" class="form-input project-email" id="email" data-validate-field="email" name="E-mail" required placeholder='E-mail'>
       </label>
       <label class="form__label center">
-        <input type="tel" class="form-input project-tel" name="WhatsApp" placeholder="WhatsApp *">
+        <input type="tel" class="form-input project-tel" id="whatsapp" name="WhatsApp" placeholder="WhatsApp">
       </label>
       <label class="form__label center">
-        <input type="tel" class="form-input project-tel" name="Telegram" placeholder="Telegram *">
+        <input type="tel" class="form-input project-tel" id="telegram" name="Telegram" placeholder="Telegram">
       </label>
       <p class="form__caption">* Выберите удобный для вас мессенджер, на который мы отправим смету. Поля с мессенджерами необязательны для заполнения.</p>
       <button type="submit" class='modal__btn btn'>Получить смету</button>
