@@ -113,7 +113,7 @@ validation2
 
     if(email.value === '' && whatsapp.value === '' && telegram.value === '') {
       xhr.abort();
-      alert('Вы забыли указать Email, WhatsApp или Telegram')
+      alert('*Выберите хотя бы один, удобный для вас, способ связи')
     } else {
       xhr.open('POST', 'mail.php', true);
       xhr.send(formData);
