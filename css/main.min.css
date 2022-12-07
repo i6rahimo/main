@@ -2330,3 +2330,8 @@ a.modal__btn {
 .calculation__btn {
   grid-area: btn;
 }
+
+.header {
+  position: fixed;
+  z-index: 23;
+}
