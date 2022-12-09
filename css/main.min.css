@@ -2209,6 +2209,27 @@ a.modal__btn {
   .thanks__text {
     font-size: 18px;
   }
+  .header__callback {
+    display: none;
+  }
+  .header__phone {
+    display: block;
+    min-width: 110px;
+  }
+  .social__link {
+    display: none;
+  }
+  .phone__link, .email__link {
+    font-size: 12px;
+  }
+  .header__email {
+    font-size: 12px;
+    
+  }
+  
+  .header__inner {
+    grid-gap: 5px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -2335,3 +2356,4 @@ a.modal__btn {
   position: fixed;
   z-index: 23;
 }
+
