@@ -81,6 +81,7 @@ img:not([src]):not([srcset]) {
   height: 100%;
 }
 
+
 .btn {
   overflow: hidden;
   text-align: center;
@@ -2356,4 +2357,79 @@ a.modal__btn {
   position: fixed;
   z-index: 23;
 }
+.main-swiper {
+  width: 100%;
+  overflow: hidden;
+}
+.main-wrapper {
+  display: flex;
+  /* height: 100%; */
+}
+.main-slide {
+  flex-shrink: 0;
+}
+.main-slide section {
+  height: 100vh;
+  overflow: scroll;
+  padding: 200px 0 200px;
+  /* flex-shrink: 0; */
+}
 
+
+.wrapper {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* height: 100vh; */
+}
+
+.main {
+  /* max-height: 100%;
+  display: flex;
+  flex: 0 0 auto; */
+}
+main {
+  /* flex: 1 0 auto; */
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+@media (max-width: 991px) {
+  .main-wrapper {
+    /* flex-direction: column; */
+  }
+  .main-slide section {
+    padding: 150px 0 400px;
+  }
+}
+/* 
+.promo {
+  
+}
+.projects {
+  height: 100%;
+}
+.model {
+  
+}
+.calculation {
+  
+}
+.video {
+  
+}
+.advantages {
+  
+}
+.gallery {
+  
+}
+.gift {
+  
+}
+
+.contacts {
+  height: 50vh;
+} */

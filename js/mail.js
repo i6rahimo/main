@@ -199,3 +199,34 @@ validation3
 //         }
 
 //     })
+
+
+const mainSwiper = new Swiper('.main-swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  wrapperClass: 'main-wrapper',
+  slideClass: 'main-slide',
+  parallax: true,
+  enabled: true,
+  speed: 1000,
+  mousewheel: {
+    invert: true,
+    eventsTarget: 'wrapper'
+  },
+  // breakpoints: {
+  //   // when window width is >= 320px
+  //   320: {
+  //     direction: 'vertical'
+  //   },
+  //   // when window width is >= 480px
+  //   991: {
+  //     direction: 'horizontal'
+  //   }
+  // }
+});
+
+mainSwiper.on('onSlideNextStart', function () {
+  $('.swiper-slide .parallax-bg').attr('data-swiper-parallax-duration','');
+  $('.swiper-slide-prev .parallax-bg').attr('data-swiper-parallax-duration','4000');
+});
